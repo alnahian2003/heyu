@@ -773,6 +773,7 @@ nav {
 }
 
 .subscribe-form {
+  position: relative;
   margin-top: 5rem;
 }
 
@@ -785,7 +786,7 @@ nav {
   border-radius: 3.125rem;
   padding: 0 30px;
   padding-right: 210px;
-  position: relative;
+/*   position: relative; */
   font-size: 18px;
 }
 
