@@ -332,7 +332,7 @@ section {
 }
 
 .row {
-  max-width: 80%;
+  max-width: 1176px;
   margin: auto;
 }
 /* End: Reusable Components */
@@ -509,7 +509,7 @@ nav {
   float: right;
   z-index: 1;
   position: absolute;
-  right: 9.375rem;
+  /* right: 9.375rem; */
 }
 
 /* Custom Shape Divider */
