@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HeyU Landing Page — #2 PSD To HTML Coversion</title>
+    <title>HeyU App Landing Page</title>
 
     <!-- Favicon -->
 
@@ -43,24 +43,24 @@
     <!-- Required Social Preview MetaTags -->
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="HeyU Landing Page — #2 PSD To HTML Coversion" />
+    <meta name="title" content="HeyU App Landing Page" />
     <meta
       name="description"
-      content="HeyU is an open source single page App Landing page website PSD to HTML template. This is my #2 PSD To HTML Conversion. Best of Luck To Me ☻"
+      content="HeyU is a clean, modern single-page app landing template designed for fast, secure messaging."
     />
+    <link rel="canonical" href="https://alnahian2003.github.io/heyu/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alnahian2003.github.io/heyu" />
-    <meta
-      property="og:title"
-      content="HeyU Landing Page — #2 PSD To HTML Coversion"
-    />
+    <meta property="og:title" content="HeyU App Landing Page" />
     <meta
       property="og:description"
-      content="HeyU is an open source single page App Landing page website PSD to HTML template. This is my #2 PSD To HTML Conversion. Best of Luck To Me ☻"
+      content="HeyU is a clean, modern single-page app landing template designed for fast, secure messaging."
     />
+    <meta property="og:site_name" content="HeyU" />
     <meta property="og:image" content="images/preview.png" />
+    <meta property="og:image:alt" content="Preview of the HeyU app landing page" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -68,15 +68,16 @@
       property="twitter:url"
       content="https://alnahian2003.github.io/heyu"
     />
-    <meta
-      property="twitter:title"
-      content="HeyU Landing Page — #2 PSD To HTML Coversion"
-    />
+    <meta property="twitter:title" content="HeyU App Landing Page" />
     <meta
       property="twitter:description"
-      content="HeyU is an open source single page App Landing page website PSD to HTML template. This is my #2 PSD To HTML Conversion. Best of Luck To Me ☻"
+      content="HeyU is a clean, modern single-page app landing template designed for fast, secure messaging."
     />
     <meta property="twitter:image" content="images/preview.png" />
+    <meta
+      property="twitter:image:alt"
+      content="Preview of the HeyU app landing page"
+    />
 
     <!-- End of Required Social Preview MetaTags -->
 
@@ -93,6 +94,7 @@
     <!-- End: Main CSS File -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Preloader -->
     <div class="preloader">
       <div class="loader"></div>
@@ -100,9 +102,9 @@
     <!-- Preloader End -->
     <!-- Header Section -->
     <header id="home">
-      <nav>
+      <nav aria-label="Primary">
         <div class="navbar-logo">
-          <a href="#" class="logo">HeyU</a>
+          <a href="#home" class="logo">HeyU</a>
         </div>
         <div id="navbar">
           <ul>
@@ -113,14 +115,31 @@
             <li><a href="#download">DOWNLOAD</a></li>
           </ul>
         </div>
-        <div id="mobileNav">
-          <span onclick="openNav()">&#9776;</span>
-        </div>
-        <div id="myNav" class="mobileNavOverlay">
+        <button
+          id="mobileNav"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="myNav"
+          aria-expanded="false"
+          onclick="openNav()"
+        >
+          &#9776;
+        </button>
+        <div
+          id="myNav"
+          class="mobileNavOverlay"
+          aria-hidden="true"
+          aria-label="Mobile navigation"
+        >
           <div class="overlay-content">
-            <a href="javascript:void()" class="close-btn" onclick="closeNav()"
-              >&times;</a
+            <button
+              type="button"
+              class="close-btn"
+              aria-label="Close menu"
+              onclick="closeNav()"
             >
+              &times;
+            </button>
             <a href="#home" onclick="closeNav()">HOME</a>
             <a href="#features" onclick="closeNav()">FEATURES</a>
             <a href="#testimonial" onclick="closeNav()">TESTIMONIAL</a>
@@ -148,7 +167,11 @@
             </div>
           </div>
           <div class="col span_1_of_2">
-            <img class="hero-img" src="images/1.png" alt="" />
+            <img
+              class="hero-img"
+              src="images/1.png"
+              alt="HeyU app interface on a mobile phone"
+            />
           </div>
         </div>
       </div>
@@ -159,6 +182,8 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
+            aria-hidden="true"
+            focusable="false"
           >
             <path
               d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
@@ -167,7 +192,13 @@
           </svg>
         </div>
       </div>
-      <button onclick="topFunction()" id="scrollUp" title="Go to top">
+      <button
+        onclick="topFunction()"
+        id="scrollUp"
+        type="button"
+        title="Go to top"
+        aria-label="Scroll to top"
+      >
         <svg
           width="1.5rem"
           height="1.5rem"
@@ -175,6 +206,8 @@
           class="bi bi-arrow-up"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
         >
           <path
             fill-rule="evenodd"
@@ -185,12 +218,18 @@
     </header>
     <!-- End: Header Section -->
 
-    <!-- Features Section -->
-    <section id="features">
+    <main id="main-content">
+      <!-- Features Section -->
+      <section id="features">
       <div class="row">
         <div class="col span_1_of_2">
           <div class="features-images">
-            <img class="features_1" src="images/features1.png" alt="" />
+            <img
+              class="features_1"
+              src="images/features1.png"
+              alt="Chat interface showing easy messaging"
+              loading="lazy"
+            />
           </div>
         </div>
         <div class="col span_1_of_2">
@@ -223,7 +262,12 @@
         </div>
         <div class="col span_1_of_2">
           <div class="features-images">
-            <img class="features_3" src="images/features2.png" alt="" />
+            <img
+              class="features_3"
+              src="images/features2.png"
+              alt="Messaging interface showing contact previews"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -236,7 +280,7 @@
         What people say <span class="red_dot">.</span>
       </h2>
       <div class="row">
-        <div class="col span_1_of_3">
+        <article class="col span_1_of_3">
           <div class="bubble">
             <p class="message">
               "Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed do
@@ -246,14 +290,19 @@
             <span class="company-name">Booking.com</span>
           </div>
           <div class="client-info">
-            <img class="avatar" src="images/avatar1.jpg" alt="" />
+            <img
+              class="avatar"
+              src="images/avatar1.jpg"
+              alt="Avatar of John Doe"
+              loading="lazy"
+            />
             <div class="name">
-              <h4>John Doe</h4>
+              <h3>John Doe</h3>
               <p class="role">CEO</p>
             </div>
           </div>
-        </div>
-        <div class="col span_1_of_3">
+        </article>
+        <article class="col span_1_of_3">
           <div class="bubble">
             <p class="message">
               "Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed do
@@ -263,14 +312,19 @@
             <span class="company-name">Airnbnb</span>
           </div>
           <div class="client-info">
-            <img class="avatar" src="images/avatar2.jpg" alt="" />
+            <img
+              class="avatar"
+              src="images/avatar2.jpg"
+              alt="Avatar of John Doe"
+              loading="lazy"
+            />
             <div class="name">
-              <h4>John Doe</h4>
+              <h3>John Doe</h3>
               <p class="role">CEO</p>
             </div>
           </div>
-        </div>
-        <div class="col span_1_of_3">
+        </article>
+        <article class="col span_1_of_3">
           <div class="bubble">
             <p class="message">
               "Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed do
@@ -280,13 +334,18 @@
             <span class="company-name">Symu.co</span>
           </div>
           <div class="client-info">
-            <img class="avatar" src="images/avatar3.jpg" alt="" />
+            <img
+              class="avatar"
+              src="images/avatar3.jpg"
+              alt="Avatar of John Doe"
+              loading="lazy"
+            />
             <div class="name">
-              <h4>John Doe</h4>
+              <h3>John Doe</h3>
               <p class="role">CEO</p>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
     <!-- End: Testimonial Section -->
@@ -297,7 +356,7 @@
         <div class="col span_1_of_3 first-col">
           <div class="first-item">
             <div class="item-description">
-              <h4>Start conversation</h4>
+              <h3>Start conversation</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut
@@ -311,6 +370,7 @@
                 class="bi bi-chat-dots"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   fill-rule="evenodd"
@@ -324,7 +384,7 @@
           </div>
           <div class="first-item">
             <div class="item-description">
-              <h4>Make a free call</h4>
+              <h3>Make a free call</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut
@@ -338,6 +398,7 @@
                 class="bi bi-telephone-outbound"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   fill-rule="evenodd"
@@ -348,7 +409,12 @@
           </div>
         </div>
         <div class="col span_1_of_3 second-col">
-          <img class="big_image" src="images/2.png" alt="" />
+          <img
+            class="big_image"
+            src="images/2.png"
+            alt="HeyU app preview on a phone"
+            loading="lazy"
+          />
         </div>
         <div class="col span_1_of_3 third-col">
           <div class="last-item">
@@ -360,6 +426,7 @@
                 class="bi bi-camera"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   fill-rule="evenodd"
@@ -373,7 +440,7 @@
               </svg>
             </div>
             <div class="item-description">
-              <h4>Take a picture</h4>
+              <h3>Take a picture</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut
@@ -389,6 +456,7 @@
                 class="bi bi-camera-video"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <path
                   fill-rule="evenodd"
@@ -397,7 +465,7 @@
               </svg>
             </div>
             <div class="item-description">
-              <h4>Send your video</h4>
+              <h3>Send your video</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut
@@ -420,22 +488,31 @@
           eiusmod tempor incididunt ut labore et dolore magna.
         </p>
       </div>
-      <div class="subscribe-form">
+      <form class="subscribe-form" action="#" aria-label="Newsletter signup">
+        <label class="sr-only" for="email">Email address</label>
         <input
+          id="email"
+          name="email"
           class="form-input"
           type="email"
           placeholder="Your email address"
+          autocomplete="email"
           required
         />
         <input type="submit" class="btn subscribe-btn" value="Subscribe" />
-      </div>
+      </form>
     </section>
     <!-- End: Subscribe Section -->
 
     <!-- Download The App Section -->
     <section id="download">
       <div class="row">
-        <img class="app-logo" src="images/app_logo.png" alt="" />
+        <img
+          class="app-logo"
+          src="images/app_logo.png"
+          alt="HeyU logo"
+          loading="lazy"
+        />
         <h2 class="stylish_heading">
           Download the app <span class="red_dot">.</span>
         </h2>
@@ -444,16 +521,21 @@
           eiusmod tempor incididunt ut labore et.
         </p>
 
-        <a href="javascript:void()">
-          <img src="images/appstore.png" alt=""
-        /></a>
+        <a href="#" aria-label="Download HeyU from the App Store">
+          <img
+            src="images/appstore.png"
+            alt="Download on the App Store"
+            loading="lazy"
+          />
+        </a>
       </div>
     </section>
     <!-- End: Download The App Section -->
+    </main>
 
     <!-- Footer Section -->
-    <section id="footer">
-      <div class="links">
+    <footer id="footer">
+      <nav class="links" aria-label="Footer">
         <ul>
           <li><a href="#home">HOME</a></li>
           <li><a href="#features">FEATURES</a></li>
@@ -461,15 +543,16 @@
           <li><a href="#howto">HOW TO</a></li>
           <li><a href="#download">DOWNLOAD</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="language-option">
-        <select name="Languages">
+        <label class="sr-only" for="language-select">Language</label>
+        <select id="language-select" name="Languages">
           <option value="English" selected>ENGLISH</option>
           <option value="বাংলা">বাংলা</option>
           <option value="हिन्दी">हिन्दी</option>
         </select>
       </div>
-    </section>
+    </footer>
     <!-- End: Footer Section -->
 
     <!-- Required JavaScript Files & CDN -->

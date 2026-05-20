@@ -1,5 +1,5 @@
 //Get the button:
-mybutton = document.getElementById("scrollUp");
+const mybutton = document.getElementById("scrollUp");
 
 function scrollFunction() {
   if (
@@ -24,9 +24,11 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-var navbar = document.querySelector("nav");
-var services = document.querySelector("#features");
-var sticky = services.offsetTop;
+const navbar = document.querySelector("nav");
+const services = document.querySelector("#features");
+const sticky = services.offsetTop;
+const mobileNav = document.getElementById("myNav");
+const mobileNavButton = document.getElementById("mobileNav");
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
@@ -50,9 +52,21 @@ $(document).ready(function () {
 // Navbar Open Function on Mobile Menu
 function openNav() {
   $("#myNav").css("width", "100%");
+  if (mobileNav) {
+    mobileNav.setAttribute("aria-hidden", "false");
+  }
+  if (mobileNavButton) {
+    mobileNavButton.setAttribute("aria-expanded", "true");
+  }
 }
 
 // Navbar Close Function on Mobile Menu
 function closeNav() {
   $("#myNav").css("width", "0");
+  if (mobileNav) {
+    mobileNav.setAttribute("aria-hidden", "true");
+  }
+  if (mobileNavButton) {
+    mobileNavButton.setAttribute("aria-expanded", "false");
+  }
 }
