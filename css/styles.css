@@ -571,7 +571,7 @@ nav {
 }
 
 .hero-img {
-  max-width: min(420px, 48vw);
+  max-width: min(520px, 60vw);
   width: 100%;
   height: auto;
   float: none;
@@ -580,7 +580,7 @@ nav {
   display: block;
   margin-left: auto;
   margin-right: 0;
-  transform: translateY(30px);
+  transform: translate(30px, 70px);
 }
 
 /* Custom Shape Divider */
@@ -1345,8 +1345,8 @@ nav {
   }
 
   .hero-img {
-    max-width: min(360px, 55vw);
-    transform: translateY(20px);
+    max-width: min(420px, 60vw);
+    transform: translate(20px, 50px);
   }
 
   .section-description {
@@ -1454,8 +1454,8 @@ nav {
     padding: 15px 30px;
   }
   .hero-img {
-    max-width: min(380px, 50vw);
-    transform: translateY(25px);
+    max-width: min(460px, 55vw);
+    transform: translate(25px, 60px);
   }
 
   .section-description {
