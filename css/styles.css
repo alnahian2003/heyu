@@ -571,14 +571,16 @@ nav {
 }
 
 .hero-img {
-  max-width: min(320px, 40vw);
+  max-width: min(420px, 48vw);
   width: 100%;
   height: auto;
   float: none;
-  z-index: 1;
+  z-index: 2;
   position: relative;
   display: block;
   margin-left: auto;
+  margin-right: 0;
+  transform: translateY(30px);
 }
 
 /* Custom Shape Divider */
@@ -1343,7 +1345,8 @@ nav {
   }
 
   .hero-img {
-    max-width: min(300px, 50vw);
+    max-width: min(360px, 55vw);
+    transform: translateY(20px);
   }
 
   .section-description {
@@ -1451,7 +1454,8 @@ nav {
     padding: 15px 30px;
   }
   .hero-img {
-    max-width: min(300px, 45vw);
+    max-width: min(380px, 50vw);
+    transform: translateY(25px);
   }
 
   .section-description {
